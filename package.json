@@ -1,0 +1,22 @@
+{
+  "name": "my_portfolio",
+  "version": "1.0.0",
+  "description": "Responsive portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexjox777/My_Portfolio.git"
+  },
+  "author": "\"Ola Oladiji\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexjox777/My_Portfolio/issues"
+  },
+  "homepage": "https://github.com/lexjox777/My_Portfolio#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
