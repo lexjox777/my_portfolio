@@ -1,12 +1,12 @@
 $primary-color: rgb(76, 75, 75);
 $secondary-color:rgb(133, 180, 66);
-$show-home-image:true;
+$show-home-image:true; 
 $home-image:url(/images/pexels-life-sm.jpg);
 $background-opacity: 0.8;
 
 
 @mixin easeOut {
-  transition: all 1.5s ease-out;
+  transition: all 0.5s ease-out; 
 
 }
 
