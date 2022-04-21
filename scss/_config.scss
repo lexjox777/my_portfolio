@@ -1,4 +1,4 @@
-$primary-color: rgb(76, 75, 75);
+$primary-color: rgb(53, 51, 51); 
 $secondary-color:rgb(133, 180, 66);
 $show-home-image:true; 
 $home-image:url(/images/pexels-life-sm.jpg);
@@ -6,7 +6,7 @@ $background-opacity: 0.8;
 
 
 @mixin easeOut {
-  transition: all 0.5s ease-out; 
+ transition: all 0.5s ease-out; 
 
 }
 
@@ -18,16 +18,25 @@ $background-opacity: 0.8;
       background-size: cover;
       background-position: 0%, 0%;
 
-      .overlay {
+      .overlay{
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
-        height: 100%;
+        height: 100%; 
         z-index: -1;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white; 
   }
 }
 

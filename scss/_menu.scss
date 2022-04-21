@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: white;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -24,7 +24,7 @@
 
       // Line 1- Rotate
       &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(5px, 5px);        
       }
 
       // Line 2- Hide
@@ -34,7 +34,7 @@
 
       // Line 3- Rotate
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px)
+        transform: rotate(-45deg) translate(7px, -6px);
       }
     }
   }
@@ -46,7 +46,7 @@
   top: 0;
   width: 100%;
   opacity: 0.9;
-  visibility: visible;
+  visibility: hidden;
 
   &.show {
     visibility: visible;
@@ -54,7 +54,7 @@
 
   &-branding,
   &-nav {
-    display: inline-flex;
+    display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
@@ -90,8 +90,8 @@
     }
 
     .portrait {
-      width: 350px;
-      height: 350px;
+      width: 250px; 
+      height: 250px;
       background: url('/images/picX.jpg');
       background-position: 50%;
       background-size: cover;
@@ -119,13 +119,13 @@
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 300;
-    color: rgb(225, 225, 111);
+    font-weight: 300; 
+    color: set-text-color($primary-color);
     text-decoration: none;
-    @include easeOut;
+    @include easeOut; 
 
-    &:hover{
-      color:$secondary-color;
+    &:hover {
+      color: $secondary-color;
     }
   }
 }

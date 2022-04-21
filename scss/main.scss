@@ -1,14 +1,14 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
+
 *{
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   @include background;
   background: $primary-color;
-  color:aliceblue;
+  color:set-text-color($primary-color); 
   height:100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -38,12 +38,12 @@ h3{
   }
 }
 
-a{
+a {
   color: rgb(238, 226, 226);
   text-decoration: none;
 }
 
-header{
+header {
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -56,26 +56,78 @@ header{
 
 main{ 
   padding: 4rem;
-  height: 100%; 
+  // height: 100%; 
+      // Using Calc to Create a Sticky Footer by Subtracting the Footer Height(60px) From the Viewpoint Height(100vh)
+  min-height: calc(100vh-60px); 
 
+  .icons{
+    margin-top: 1rem;
+    a {
+      padding:0.4rem;
 
-
-
- .icons{
-  margin-top: 1rem;
-  a{
-    padding:0.4rem;
-
-    &:hover{ 
-      color: $secondary-color;
-      @include easeOut(); 
+      &:hover {  
+        color: $secondary-color;
+        @include easeOut(); 
+      }
     }
-   }
   }
- &#home{
-   overflow: hidden;
-   h1{
-     margin-top: 20vh;
-   }
+  &#home{
+    overflow: hidden;
+    h1{
+      margin-top: 20vh;
+    }
   }
-} 
+}
+
+.about-info{
+  display:grid;
+  grid-gap: 30px;
+  grid-template-areas: 
+  'bioimage bio bio'
+  'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); 
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+    height: 250px;
+  
+  }
+  
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+  
+  .job-1 {
+    grid-area: job1;
+  }
+  
+  .job-2 {
+    grid-area: job2;
+  }
+  
+  .job-3 {
+    grid-area: job3;
+  }
+  
+  .job {
+    background: rgba(lighten($secondary-color, 1), 0.2);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  
+  }
+
+}
+
+#main-footer{
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color,10);
+  color: set-text-color($primary-color);  
+  height: 60px; 
+}
+
+@import 'mobile';
