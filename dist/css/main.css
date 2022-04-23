@@ -218,6 +218,30 @@ main {
       .boxes div:hover span {
         color: black; }
 
+.tools {
+  display: grid;
+  grid-gap: 0.3rem;
+  grid-template-columns: repeat(4, 1fr);
+  flex-wrap: wrap;
+  font-size: 2rem;
+  justify-content: space-evenly;
+  padding: 2rem 2rem;
+  margin: 0.5rem 0.5rem;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  color: #85b442; }
+  .tools .skills {
+    max-width: 100%;
+    border: #85b442 solid;
+    display: inline; }
+    .tools .skills:hover {
+      background: #302e2e, 0.1;
+      opacity: 0.3;
+      color: #cd821f;
+      padding: 1rem 1.5rem;
+      transition: all 0.5s ease-out; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -242,10 +266,14 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .tools {
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
+    grid-template-columns: repeat(3, 1fr); }
+  .tools {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
@@ -279,10 +307,14 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
+    grid-template-columns: repeat(2, 1fr); }
+  .tools {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
+    grid-template-columns: 1fr; }
+  .tools {
     grid-template-columns: 1fr; } }
