@@ -6,7 +6,7 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  @include easeOut;
+  @include easeOut; 
 
   .btn-line {
     width: 28px;
@@ -38,11 +38,11 @@
       }
     }
   }
-}
+} 
 
 // Menu Overlay
 .menu {
-  position: fixed;
+  position:fixed;
   top: 0;
   width: 100%;
   opacity: 0.9;
@@ -52,8 +52,7 @@
     visibility: visible;
   }
 
-  &-branding,
-  &-nav {
+  &-branding{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -65,29 +64,37 @@
   }
 
   &-nav {
-    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh; 
+    overflow: hidden;
+    margin: 0; 
     padding: 0;
     background: darken($primary-color, 5);
-    list-style: none;
-    transform: translate3d(0, -100%, 0);
-    @include easeOut;
+    list-style: none; 
+    transform: translate3d(0, 100%, 0);
+    @include easeOut; 
 
     &.show {
       // Slide in from top  
-      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 100%, 0); 
     }
   }
 
   // Branding side
   &-branding {
     background: $primary-color;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, -100%, 0);
     @include easeOut;
 
     &.show {
       // Slide in from bottom
-      transform: translate3d(0, 0, 0);
-    }
+      transform: translate3d(0, 0, 0); 
+    } 
 
     .portrait {
       width: 250px; 
@@ -102,7 +109,7 @@
 
   .nav-item {
     transform: translate3d(600px, 0, 0);
-    @include easeOut;
+    @include easeOut; 
 
     &.show {
       // Slide in from right
@@ -114,8 +121,8 @@
   }
 
   .nav-link {
-    display: inline-block;
-    position: relative;
+    display: inline-block; 
+    position: relative; 
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
@@ -126,7 +133,7 @@
 
     &:hover {
       color: $secondary-color;
-    }
+    } 
   }
 }
 

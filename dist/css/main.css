@@ -28,7 +28,7 @@
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
-  .menu-branding, .menu-nav {
+  .menu-branding {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -38,17 +38,25 @@
     height: 100vh;
     overflow: hidden; }
   .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     background: #282626;
     list-style: none;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
-      transform: translate3d(0, 0, 0); }
+      transform: translate3d(0, 100%, 0); }
   .menu-branding {
     background: #353333;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -223,7 +231,7 @@ main {
   grid-gap: 0.3rem;
   grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;
-  font-size: 2rem;
+  font-size: 1.5rem;
   justify-content: space-evenly;
   padding: 2rem 2rem;
   margin: 0.5rem 0.5rem;
@@ -233,13 +241,12 @@ main {
   color: #85b442; }
   .tools .skills {
     max-width: 100%;
-    border: #85b442 solid;
     display: inline; }
     .tools .skills:hover {
       background: #302e2e, 0.1;
       opacity: 0.3;
       color: #cd821f;
-      padding: 1rem 1.5rem;
+      padding: 1rem 1rem;
       transition: all 0.5s ease-out; }
 
 .btn, .btn-dark, .btn-light {

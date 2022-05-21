@@ -174,7 +174,7 @@ main{
   grid-gap: 0.3rem;
   grid-template-columns: repeat(4,1fr);
   flex-wrap: wrap;
-  font-size: 2rem;
+  font-size: 1.5rem; 
   justify-content: space-evenly;
   padding: 2rem 2rem;   
   margin: 0.5rem 0.5rem; 
@@ -187,7 +187,7 @@ main{
 
   .skills{ 
     max-width: 100%;
-    border: lighten($secondary-color,0.1) solid; 
+    // border: lighten($secondary-color,0.1) solid; 
     display: inline;
   
  
@@ -195,9 +195,9 @@ main{
       background: darken($primary-color, 2), 0.1;
       opacity: 0.3; 
       color: rgb(205, 130, 31); 
-      padding: 1rem 1.5rem;
+      padding: 1rem 1rem; 
 
- 
+  
       @include easeOut; 
     }
   }     
@@ -234,7 +234,7 @@ main{
   padding: 1rem;
   background: darken($primary-color,10);
   color: set-text-color($primary-color);  
-  height: 60px; 
+  height: 60px;
 }
 
 @import 'mobile';
