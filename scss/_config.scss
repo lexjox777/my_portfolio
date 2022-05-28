@@ -4,12 +4,12 @@ $show-home-image:true;
 $home-image:url(/images/pexels-life-sm.jpg);
 $background-opacity: 0.8;
 
-
+// Transition All
 @mixin easeOut {
  transition: all 0.5s ease-out; 
-
 }
 
+// Background Options
 @mixin background {
   @if $show-home-image {
     &#bg-img {
