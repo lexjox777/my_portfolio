@@ -1,7 +1,7 @@
 $primary-color: rgb(53, 51, 51); 
 $secondary-color:rgb(133, 180, 66);
 $show-home-image:true; 
-$home-image:url(/images/pexels-life-sm.jpg);
+$home-image:url(./images/pexels-life-sm.jpg);
 $background-opacity: 0.8;
 
 // Transition All
@@ -19,7 +19,7 @@ $background-opacity: 0.8;
       background-position: 0%, 0%;
 
       .overlay{
-        position: absolute;
+        position: absolute; 
         top: 0;
         right: 0;
         width: 100%;
