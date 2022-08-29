@@ -58,12 +58,12 @@
      transform: translate3d(100%,0,0);
 
      .portrait{
-       background:url('./images/picX.jpg') ;
+       background:url('../images/picX.jpg') ;
        width: 150px; 
        height: 150px; 
        background-size: cover;  
      }
-   }
+   } 
 
    .about-info{
      grid-template-areas: 
